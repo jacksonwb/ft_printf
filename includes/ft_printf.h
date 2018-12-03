@@ -6,13 +6,13 @@
 /*   By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 10:08:21 by jbeall            #+#    #+#             */
-/*   Updated: 2018/11/29 20:51:51 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/12/03 14:39:03 by jbeall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include "./libft/libft.h"
+# include "libft.h"
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>

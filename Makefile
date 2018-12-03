@@ -6,22 +6,26 @@
 #    By: jbeall <jbeall@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/14 10:09:01 by jbeall            #+#    #+#              #
-#    Updated: 2018/11/29 12:02:45 by jbeall           ###   ########.fr        #
+#    Updated: 2018/12/03 14:42:27 by jbeall           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 FLAGS = -Wall -Werror -Wextra
-SRC = ft_printf.c parse.c handler.c handler2.c utils_handle.c handlef.c \
+SRC := ft_printf.c parse.c handler.c handler2.c utils_handle.c handlef.c \
 utils_handlef.c utils_handlef_2.c utils_handlef_3.c utils.c utils_parse.c
-OBJECTS = $(SRC:.c=.o)
+SRC_DIR = ./src
+OBJECTS := $(SRC:.c=.o)
 LIBRARIES = libftprintf.a ./libft/libft.a
+SRC := $(addprefix $(SRC_DIR)/, $(SRC))
+INC_DIR = ./includes/
+LIB_DIR = ./libft/
 
 $(NAME):
 	@make -C ./libft --no-print-directory
 	@cp ./libft/libft.a $(NAME)
 	@echo "creating ft_printf objects..."
-	@gcc $(FLAGS) -c $(SRC)
+	@gcc $(FLAGS) -c $(SRC) -I$(INC_DIR) -I$(LIB_DIR)
 	@echo "\033[92mdone!\033[0m"
 	@echo "creating libftprintf.a library..."
 	@ar -rc $(NAME) $(OBJECTS)
