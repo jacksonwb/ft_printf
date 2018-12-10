@@ -8,7 +8,9 @@ And the following flags: `#+-0` and `space`
 
 With the following modifiers: `hh`, `h`, `l`, `ll`
 
-ft_printf also correctly handles input for minimum field width and precision, specified with `.`
+ft_printf also correctly handles input for minimum field width and precision specified with `.`
+
+Field width and precision can be specified in the format string as a number value or as `*` and passed as argument.
 
 Note: I tried to adhere as closely as I could to how printf handles undefined behaviour, but some behaviour is different.
 Note on floats: I tried to handle floats with correct round-to-even behaviour as well as I could. Behaviour is perfect for a very large range of doubles and long doubles. However with numbers with very high precision (~30 decimal places) rounding behaviour is not functional. Additionally with extremely high numbers conversion becomes inaccurate.
