@@ -2,9 +2,12 @@
 This is a partial printf reimplementation for 42 Silicon Valley
 
 ## Description
-ft_printf handles the following conversions: `cspdouxXf%`.
-And the following flags: `#+-0` and `space`.
-With the following modifiers: `hh`, `h`, `l`, `ll`.
+ft_printf handles the following conversions: `cspdouxXf%`
+
+And the following flags: `#+-0` and `space`
+
+With the following modifiers: `hh`, `h`, `l`, `ll`
+
 ft_printf also correctly handles input for minimum field width and precision, specified with `.`
 
 Note: I tried to adhere as closely as I could to how printf handles undefined behaviour, but some behaviour is different.
