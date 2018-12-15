@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit_lst.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbeall <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jackson <jbeall@student.42.us.org>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/30 14:49:18 by jbeall            #+#    #+#             */
-/*   Updated: 2018/10/30 18:54:33 by jbeall           ###   ########.fr       */
+/*   Updated: 2018/12/14 21:29:04 by jackson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,7 @@ t_list			*ft_strsplit_lst(char const *s, char c)
 {
 	t_list		*lst;
 	int			flag;
-	int			i;
 
-	i = 0;
 	flag = 0;
 	if (!s)
 		return (NULL);
